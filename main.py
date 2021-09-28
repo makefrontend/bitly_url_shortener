@@ -59,13 +59,13 @@ def main():
         try:
             bitlink_response = count_clicks(url_parse, bitly_token)
         except requests.exceptions.HTTPError:
-            print('Не верная ссылка для подсчета кликов')
+            print('Неверная ссылка для подсчета кликов')
             return
     else:
         try:
             bitlink_response = shorten_link(url_user, bitly_token)
         except requests.exceptions.HTTPError as error:
-            print('Ссылка введена не верно!')
+            print('Ссылка введена неверно!')
             return
     print(bitlink_response)
 
