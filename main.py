@@ -53,8 +53,8 @@ def main():
     load_dotenv()
     bitly_token = os.getenv('BITLY_TOKEN')
     arguments = pars_arguments()
-    url_user = arguments.url
-    url_parse = get_bitlink_url(url_user)
+    url_input = arguments.url
+    url_parse = get_bitlink_url(url_input)
     if is_bitlink(url_parse, bitly_token):
         try:
             bitlink_response = count_clicks(url_parse, bitly_token)
