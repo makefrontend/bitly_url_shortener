@@ -10,9 +10,15 @@
 - `BITLY_TOKEN=<YOUR_TOKEN>`
 
 ## Установка скрипта 
-- Скачайте архив или склонируйте репозиторий на свой ПК командой ```git clone <repository address>```.
-- В директории скрипта выполните команду ```pip install -r requirements.txt```
+- Скачайте архив или склонируйте репозиторий на свой ПК командой 
+```git clone <repository address>```
+
+- В директории скрипта выполните команду 
+```pip install -r requirements.txt```
 
 ## Как запустить
-- Чтобы сократить ссылку ```python3 main.py <your address link>```
-- Чтобы получить количество переходов ```python3 main.py <bit.ly address link>```
+- Чтобы сократить ссылку 
+```python3 main.py <your address link>```
+
+- Чтобы получить количество переходов 
+```python3 main.py <bit.ly address link>```
