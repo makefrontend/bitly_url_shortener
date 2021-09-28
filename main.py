@@ -7,8 +7,10 @@ from dotenv import load_dotenv
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('url')
+    parser = argparse.ArgumentParser(
+        description='Создает bitlink если ввести URL сайта.\
+            Возвращается количество переходов если ввести bitlink.')
+    parser.add_argument('url', help='Добавьте bitlink иди URL сайта.')
     return parser.parse_args()
 
 
@@ -46,7 +48,7 @@ def count_clicks(url, token):
     }
     response = requests.get(clicks_url.format(url), headers=headers)
     response.raise_for_status()
-    return response.json()['total_clicks']}'
+    return response.json()['total_clicks']
 
 
 def main():
