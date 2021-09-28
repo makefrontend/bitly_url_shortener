@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 from dotenv import load_dotenv
 
 
-def pars_arguments():
+def parse_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('url')
     return parser.parse_args()
@@ -52,7 +52,7 @@ def count_clicks(url, token):
 def main():
     load_dotenv()
     bitly_token = os.getenv('BITLY_TOKEN')
-    arguments = pars_arguments()
+    arguments = parse_arguments()
     url_input = arguments.url
     url_parse = get_bitlink_url(url_input)
     if is_bitlink(url_parse, bitly_token):
