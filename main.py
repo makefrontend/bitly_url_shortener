@@ -8,9 +8,9 @@ from dotenv import load_dotenv
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description='Создает bitlink если ввести URL сайта.\
-            Возвращается количество переходов если ввести bitlink.')
-    parser.add_argument('url', help='Добавьте bitlink иди URL сайта.')
+        description='Создает bitlink, если ввести URL сайта.\
+            Возвращается количество переходов, если ввести bitlink.')
+    parser.add_argument('url', help='Добавьте bitlink или URL сайта.')
     return parser.parse_args()
 
 
