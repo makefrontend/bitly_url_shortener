@@ -15,7 +15,7 @@ def parse_arguments():
 
 
 def shorten_link(url, token):
-    bitlink_url = 'https://api-ssl.bitly.com/v4/bitlinks/'
+    bitlink_url = 'https://api-ssl.bitly.com/v4/shorten'
     headers = {
       'Authorization': token,
     }
@@ -65,7 +65,7 @@ def main():
             return
     else:
         try:
-            bitlink_response = shorten_link(url_user, bitly_token)
+            bitlink_response = shorten_link(url_parse, bitly_token)
         except requests.exceptions.HTTPError as error:
             print('Ссылка введена неверно!')
             return
