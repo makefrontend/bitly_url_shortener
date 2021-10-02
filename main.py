@@ -15,7 +15,7 @@ def parse_arguments():
 
 
 def shorten_link(url, token):
-    bitlink_url = 'https://api-ssl.bitly.com/v4/shorten'
+    bitlink_url = 'https://api-ssl.bitly.com/v4/bitlinks/'
     headers = {
       'Authorization': token,
     }
