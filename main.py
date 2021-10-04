@@ -65,7 +65,7 @@ def main():
             return
     else:
         try:
-            bitlink_response = shorten_link(url_parse, bitly_token)
+            bitlink_response = shorten_link(url_input, bitly_token)
         except requests.exceptions.HTTPError as error:
             print('Ссылка введена неверно!')
             return
